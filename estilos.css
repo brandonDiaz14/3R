@@ -261,6 +261,15 @@ h5{
     border:#CCCCCC 1px solid;
     background-color: #C9D46C;
 }
+#map {
+	height: 500px;
+	width: 100%;
+}
+p{
+    text-align: center;
+    color: white;
+    margin: 2px;
+}
 @media (max-width: 930px) {
     #contenedor2{
         flex-direction: column;
