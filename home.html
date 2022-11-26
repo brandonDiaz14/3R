@@ -8,52 +8,52 @@
     <link rel="stylesheet" href="estilos.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
-    var current = 0;
-    var imagenes = new Array();
-    
-    $(document).ready(function() {
-        var numImages = 11;
-        if (numImages <= 3) {
-            $('.right-arrow').css('display', 'none');
-            $('.left-arrow').css('display', 'none');
-        }
-    
-        $('.left-arrow').on('click',function() {
-            if (current > 0) {
-                current = current - 1;
-            } else {
-                current = numImages - 3;
+        var current = 0;
+        var imagenes = new Array();
+        
+        $(document).ready(function() {
+            var numImages = 11;
+            if (numImages <= 3) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
             }
-    
-            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
-    
-            return false;
+        
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            });
+        
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 3) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            }); 
         });
-    
-        $('.left-arrow').on('hover', function() {
-            $(this).css('opacity','0.5');
-        }, function() {
-            $(this).css('opacity','1');
-        });
-    
-        $('.right-arrow').on('hover', function() {
-            $(this).css('opacity','0.5');
-        }, function() {
-            $(this).css('opacity','1');
-        });
-    
-        $('.right-arrow').on('click', function() {
-            if (numImages > current + 3) {
-                current = current+1;
-            } else {
-                current = 0;
-            }
-    
-            $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
-    
-            return false;
-        }); 
-    });
     </script>
 </head>
 <body>
@@ -65,7 +65,7 @@
         <nav id="menu">
             <ul>
                 <div id="opcion1">
-                    <li><a href="#">INICIAR SESION</a></li>
+                    <li><a href="index.php">INICIAR SESION</a></li>
                 </div>
                 <div id="opcion2">
                     <li><a href="venta.html">VENDER</a></li>
@@ -89,7 +89,7 @@
                 
                 <div class="carrusel">
                     <div class="product" id="product_1">
-                        <img src="recursos/1.PNG" width="195" height="100" />
+                        <a href="productos/periodico.html"><img src="recursos/1.PNG" width="195" height="100" /></a>
                         <h5>PERIODICO</h5>
                         <p>484 $/kg</p>
                     </div>
@@ -99,54 +99,54 @@
                         <p>767 $/kg</p>
                     </div>
                     <div class="product" id="product_3">
-                        <img src="recursos/3.PNG" width="195" height="100" />
+                        <a href="productos/papel.html"><img src="recursos/3.PNG" width="195" height="100" /></a>
                         <h5>PAPEL</h5>
                         <p>1068 $/kg</p>
                     </div>
                     <div class="product" id="product_4">
-                        <img src="recursos/4.PNG" width="195" height="100" />
+                        <a href="productos/vidrio.html"><img src="recursos/4.PNG" width="195" height="100" /></a>
                         <h5>VIDRIO</h5>
                         <p>133 $/kg</p>
                     </div>
                     <div class="product" id="product_5">
-                        <img src="recursos/5.PNG" width="195" height="100" />
+                        <a href="productos/pet.html"><img src="recursos/5.PNG" width="195" height="100" /></a>
                         <h5>PET</h5>
                         <p>790 $/kg</p>
                     </div>
                     <div class="product" id="product_6">
-                        <img src="recursos/6.PNG" width="195" height="100" />
+                        <a href="productos/aluminio.html"><img src="recursos/6.PNG" width="195" height="100" /></a>
                         <h5>ALUMINIO</h5>
                         <p>5200 $/kg</p>
                     </div>
                     <div class="product" id="product_7">
-                        <img src="recursos/7.PNG" width="195" height="100" />
+                        <a href="productos/metal.html"><img src="recursos/7.PNG" width="195" height="100" /></a>
                         <h5>METAL</h5>
                         <p>900 $/kg</p>
                     </div>
                     <div class="product" id="product_8">
-                        <img src="recursos/8.PNG" width="195" height="100" />
+                        <a href="productos/argollas.html"><img src="recursos/8.PNG" width="195" height="100" /></a>
                         <h5>ARGOLLAS DE LATA</h5>
-                        <p>SN</p>
+                        <p>5000 $/Kg</p>
                     </div>
                     <div class="product" id="product_9">
-                        <img src="recursos/9.PNG" width="195" height="100" />
+                        <a href="productos/cobre.html"><img src="recursos/9.PNG" width="195" height="100" /></a>
                         <h5>COBRE</h5>
-                        <p>900 $/kg</p>
+                        <p>6000 $/kg</p>
                     </div>
                     <div class="product" id="product_10">
-                        <img src="recursos/10.PNG" width="195" height="100" />
+                        <a href="productos/computadores.html"><img src="recursos/10.PNG" width="195" height="100" /></a>
                         <h5>COMPUTADORES</h5>
-                        <p>900 $/kg</p>
+                        <p>2000 $/kg</p>
                     </div>
                     <div class="product" id="product_11">
-                        <img src="recursos/11.PNG" width="195" height="100" />
+                        <a href="productos/electrodomesticos.html"><img src="recursos/11.PNG" width="195" height="100" /></a>
                         <h5 style="font-size: 16.5PX;" >ELECTRODOMESTICOS</h5>
-                        <p>900 $/kg</p>
+                        <p>2000 $/kg</p>
                     </div>
                     <div class="product" id="product_12">
-                        <img src="recursos/12.PNG" width="195" height="100" />
+                        <a href="productos/tapas.html"><img src="recursos/12.PNG" width="195" height="100" /></a>
                         <h5>TAPAS</h5>
-                        <p>900 $/kg</p>
+                        <p>1200 $/kg</p>
                     </div>
                 </div>
             </div>
@@ -161,34 +161,34 @@
             <h2 id="titulo_contenido">NUESTROS PRODUCTOS</h2>
             <div id="contenedor1">
                 <div id="imagen1">
-                    <img src="recursos/1.PNG"  alt="">
+                    <a href="productos/periodico.html"><img src="recursos/1.PNG"  alt=""></a>
                     <h3>PERIODICO</h3>
-                    <h4>$25</h4>
+                    <h4>$ 484</h4>
                 </div>
                 <div id="imagen2">
                     <a href="productos/carton.html"><img src="recursos/2.PNG"  alt=""></a>
                     <h3>CARTON</h3>
-                    <h4>$25</h4>
+                    <h4>$ 767</h4>
                 </div>
                 <div id="imagen3">
-                    <img src="recursos/3.PNG" alt="">
+                    <a href="productos/papel.html"><img src="recursos/3.PNG" alt=""></a>
                     <h3>PAPEL</h3>
-                    <h4>$25</h4>
+                    <h4>$ 1068</h4>
                 </div>
                 <div id="imagen4">
-                    <img  src="recursos/5.PNG" alt="">
+                    <a href="productos/pet.html"><img  src="recursos/5.PNG" alt=""></a>
                     <h3>PET</h3>
-                    <h4>$25</h4>
+                    <h4>$ 790</h4>
                </div>
                <div id="imagen6">
-                    <img src="recursos/6.PNG" alt="">
+                    <a href="productos/aluminio.html"><img src="recursos/6.PNG" alt=""></a>
                     <h3>ALUMINIO</h3>
-                    <h4>$25</h4>
+                    <h4>$ 5200</h4>
                 </div>
                 <div id="imagen7">
-                    <img src="recursos/7.PNG" alt="">
+                    <a href="productos/metal.html"><img src="recursos/7.PNG" alt=""></a>
                     <h3>METAL</h3>
-                    <h4>$25</h4>
+                    <h4>$ 900</h4>
                 </div>
 
                 
@@ -204,40 +204,47 @@
 
                 
                 <div id="imagen8">
-                    <img src="recursos/8.PNG" alt="">
+                    <a href="productos/argollas.html"><img src="recursos/8.PNG" alt=""></a>
                     <h3>ARGOLLAS DE LATA</h3>
-                    <h4>$25</h4>
+                    <h4>$ 5000</h4>
                 </div>
                 <div id="imagen9">
-                    <img src="recursos/9.PNG" alt="">
+                    <a href="productos/cobre.html"><img src="recursos/9.PNG" alt=""></a>
                     <h3>COBRE</h3>
-                    <h4>$25</h4>
+                    <h4>$ 6000</h4>
                 </div>
                 <div id="imagen10">
-                    <img src="recursos/10.PNG" alt="">
+                    <a href="productos/computadores.html"><img src="recursos/10.PNG" alt=""></a>
                     <h3>COMPUTADORES</h3>
-                    <h4>$25</h4>
+                    <h4>$ 2000</h4>
                 </div>
                 <div id="imagen11">
-                    <img src="recursos/11.PNG" alt="">
+                    <a href="productos/electrodomesticos.html"><img src="recursos/11.PNG" alt=""></a>
                     <h3>ELECTRODOMESTICOS</h3>
-                    <h4>$25</h4>
+                    <h4>$ 2000</h4>
                 </div>
                 <div id="imagen12">
-                    <img src="recursos/4.PNG" alt="">
+                    <a href="productos/vidrio.html"><img src="recursos/4.PNG" alt=""></a>
                     <h3>VIDRIO</h3>
-                    <h4>$25</h4>
+                    <h4>$ 133</h4>
                 </div>
                 <div id="imagen12">
-                    <img src="recursos/12.PNG" alt="">
+                    <a href="productos/tapas.html"><img src="recursos/12.PNG" alt=""></a>
                     <h3>TAPAS</h3>
-                    <h4>$25</h4>
+                    <h4>$ 1200</h4>
                 </div>
             </div>
             
             
             <footer>
-                <h5>FRONT-END STORE - TODOS LOS DERECHOS RESERVADOS 2022 BRANDON DIAZ</h5>
+                <div id="whatsapp">
+                    <a href="https://wa.me/573224254895/?text=hola%deseo informacion"><img src="images/whatsapp.png" width="50" height="50" /></a>
+                </div>
+                <div id="derechos">
+                    <h5>COMUNICATE CON NOSTROS POR WHATSAPP - TODOS LOS DERECHOS RESERVADOS 2022 BRANDON DIAZ</h5>
+                </div>
+                
+                
             </footer>
 
         </main>
